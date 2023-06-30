@@ -1,0 +1,34 @@
+{
+  "one": [
+    {
+      "background": "/assets/images/hero-slider/one/bg-1.png",
+      "subTitle": "",
+      "title": "We have one of the Best Lawyers for Corporate & Litigation.",
+      "price": {
+        "main": "Legal Services",
+        "image": "/assets/images/hero-slider/one/1.png",
+        "unit": "pakage"
+      }
+    },
+    {
+      "background": "/assets/images/hero-slider/one/bg-2.png",
+      "subTitle": "",
+      "title": "We have some best Finance Consultants.",
+      "price": {
+        "main": "Finance Services",
+        "image": "/assets/images/hero-slider/one/2.png",
+        "unit": "pakage"
+      }
+    }
+  ],
+  "four": [
+    {
+      "image": "/assets/images/hero-slider/four/1.png",
+      "background": "/assets/images/hero-slider/four/bg-1.png"
+    },
+    {
+      "image": "/assets/images/hero-slider/four/2.png",
+      "background": "/assets/images/hero-slider/four/bg-2.png"
+    }
+  ]
+}
