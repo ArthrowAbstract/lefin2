@@ -19,29 +19,10 @@ import HeroSliderOne from "../components/sections/hero-slider/HeroSliderOne";
 import heroslideOneData from "../data/sections/hero-slider.json";
 import CategoriesOne from "../components/sections/categories/CategoriesOne";
 import categoriesOneData from "../data/sections/categories.json";
+import Cform from "../components/sections/introduction/cform";
 
 
 export default function homepage4() {
-  const dispatch = useDispatch();
-  const [currentProductTabsCategory, setCurrentProductTabsCategory] = useState({
-    featuredProducts: "",
-  });
-  const shopState = useSelector((state) => state.shopReducer);
-  const blogState = useSelector((state) => state.blogReducer);
-  const { featuredProducts } = shopState;
-  const { allPosts } = blogState;
-  useEffect(() => {
-    dispatch(fetchFeaturedProductsRequest({ limit: 8 }));
-    dispatch(fetchPostsRequest({ limit: 4 }));
-  }, []);
-  useEffect(() => {
-    dispatch(
-      fetchFeaturedProductsRequest({
-        limit: 8,
-        category: currentProductTabsCategory.featuredProducts,
-      })
-    );
-  }, [currentProductTabsCategory.featuredProducts]);
   return (
     <LayoutFour
       title="Index"
@@ -52,12 +33,15 @@ export default function homepage4() {
       <HeroSliderOne data={heroslideOneData.one} />
       <br />
       <IntroductionTwo id="about" />
+
       <IntroductionThree />
       <Container>
       <CategoriesOne data={categoriesOneData.one} />
       <CategoriesOne data={categoriesOneData.two} />
       </Container>
       <IntroductionFour />
+      <Cform/>
+
     </LayoutFour>
   );
 }
